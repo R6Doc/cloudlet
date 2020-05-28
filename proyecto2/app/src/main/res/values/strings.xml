@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">proyecto</string>
+    <string name="fragment_home">Home</string>
+    <string name="time_extra"> + Tiempo</string>
+    <string name="QR">QR</string>
+    <string name="punto">Puntos</string>
+    <string name="text1">Noticias que nos mueven</string>
+
+</resources>

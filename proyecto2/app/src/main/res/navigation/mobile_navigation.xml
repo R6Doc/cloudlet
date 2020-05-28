@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@layout/home_fragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.proyecto.home"
+        android:label="@string/fragment_home"
+        tools:layout="@layout/home_fragment" />
+
+
+    <fragment
+        android:id="@+id/navigation_qr"
+        android:name="com.example.proyecto.QR"
+        android:label="@string/QR"
+        tools:layout="@layout/q_r_fragment" />
+
+
+    <fragment
+        android:id="@+id/navigation_time_extra"
+        android:name="com.example.proyecto.time_extra"
+        android:label="@string/time_extra"
+        tools:layout="@layout/time_extra_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_point"
+        android:name="com.example.proyecto.point"
+        android:label="@string/punto"
+        tools:layout="@layout/point_fragment" />
+
+
+</navigation>
