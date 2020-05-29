@@ -9,24 +9,24 @@
         android:id="@+id/nav_home"
         android:name="com.encicla.appcloudlet.home"
         android:label="@string/navigation_home"
-        tools:layout="@layout/home_fragment" />
+        tools:layout="@layout/home" />
 
     <fragment
         android:id="@+id/nav_q_r"
-        android:name="com.encicla.appcloudlet."
+        android:name="com.encicla.appcloudlet.qr"
         android:label="@string/navigation_qr"
-        tools:layout="@layout/activity_q_r" />
+        tools:layout="@layout/qr" />
 
     <fragment
         android:id="@+id/nav_time"
         android:name="com.encicla.appcloudlet.time_extra"
         android:label="@string/navigation_time"
-        tools:layout="@layout/time_extra_fragment" />
+        tools:layout="@layout/time_extra" />
 
     <fragment
         android:id="@+id/nav_punto"
-        android:name="com.encicla.appcloudlet.puntos"
+        android:name="com.encicla.appcloudlet.score"
         android:label="@string/navigation_puntos"
-        tools:layout="@layout/puntos_fragment" />
+        tools:layout="@layout/score" />
 
 </navigation>
