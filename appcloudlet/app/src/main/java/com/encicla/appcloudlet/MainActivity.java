@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case 1:{
-                        fragmentClass = QR.class;
+                        fragmentClass = qr.class;
                         break;
                     }
                     case 2:{
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case 3:{
-                        fragmentClass = puntos.class;
+                        fragmentClass = score.class;
                         break;
                     }
 
