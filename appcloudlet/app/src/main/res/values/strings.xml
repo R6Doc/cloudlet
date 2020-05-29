@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">appcloudlet</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_qr">QR</string>
+    <string name="navigation_time">+ Tiempo</string>
+    <string name="navigation_puntos">Puntos</string>
+    <string name="textbutton">Coge tú bicicleta</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
