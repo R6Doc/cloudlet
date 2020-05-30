@@ -1,10 +1,30 @@
 package com.encicla.appcloudlet;
 
-import android.annotation.SuppressLint;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-@SuppressLint("Registered")
-public class home extends AppCompatActivity {
+import androidx.fragment.app.Fragment;
+
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class home extends Fragment {
+
+
+    public home() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.home, container, false);
+    }
 
 }

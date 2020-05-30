@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         sNavigationDrawer.setMenuItemList(menuItems);
 
         fragmentClass =  home.class;
+        fragmentClass =  qr.class;
         try {
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
