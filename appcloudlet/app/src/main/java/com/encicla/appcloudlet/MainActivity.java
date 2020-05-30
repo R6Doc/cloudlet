@@ -1,5 +1,6 @@
 package com.encicla.appcloudlet;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         sNavigationDrawer = findViewById(R.id.navigationDrawer);
         List<MenuItem> menuItems = new ArrayList<>();
         menuItems.add(new MenuItem("Home",R.drawable.encicla_digital_web_tramite_100_digital_jpg));
@@ -44,20 +47,24 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("Position "+position);
 
                 switch (position){
-                    case 0:{
-                        fragmentClass = home.class;
+                    case R.id.nav_home:{
+                        Intent intent1= new Intent(MainActivity.this, home.class);
+                        startActivity(intent1);
                         break;
                     }
-                    case 1:{
-                        fragmentClass = qr.class;
+                    case R.id.nav_q_r:{
+                        Intent intent2= new Intent(MainActivity.this, qr.class);
+                        startActivity(intent2);
                         break;
                     }
-                    case 2:{
-                        fragmentClass = time_extra.class;
+                    case R.id.nav_time:{
+                        Intent intent3= new Intent(MainActivity.this, time_extra.class);
+                        startActivity(intent3);
                         break;
                     }
-                    case 3:{
-                        fragmentClass = score.class;
+                    case R.id.nav_punto:{
+                        Intent intent4= new Intent(MainActivity.this, score.class);
+                        startActivity(intent4);
                         break;
                     }
 
