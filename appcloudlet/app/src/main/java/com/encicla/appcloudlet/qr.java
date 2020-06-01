@@ -8,10 +8,11 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.zxing.Result;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
+
+
 public class qr extends Fragment {
 
 
@@ -23,8 +24,9 @@ public class qr extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.qr, container, false);
     }
+
 
 }
