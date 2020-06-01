@@ -1,18 +1,25 @@
 package com.encicla.appcloudlet;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.zxing.Result;
 import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
+
+public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+    private ZXingScannerView mscannerview;
     SNavigationDrawer sNavigationDrawer;
     Class fragmentClass;
     public static Fragment fragment;
@@ -109,5 +116,25 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void btnescanear(View v){
+        mscannerview= new ZXingScannerView(this);
+        setContentView(mscannerview);
+        mscannerview.setResultHandler(this);
+        mscannerview.startCamera();
+
+    }
+
+    @Override
+    public void handleResult(Result result) {
+        Log.v("HandleResult",result.getText());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Resultado del scan");
+        builder.setMessage(result.getText());
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        mscannerview.resumeCameraPreview(this);
     }
 }
